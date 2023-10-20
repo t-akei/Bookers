@@ -1,6 +1,5 @@
 class BooksController < ApplicationController
   def new
-    @book = Book.new
   end
   
   def create
@@ -8,7 +7,7 @@ class BooksController < ApplicationController
     
     book.save
     
-    redirect_to "/books/#{book.id}"
+    redirect_to '/show'
     
   end
 

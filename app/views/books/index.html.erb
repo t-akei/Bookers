@@ -1,6 +1,20 @@
 <h1>Books</h1>
+<%= for book in @book do %>
+<span>
+
+  <P>Title</P>
+  <div><%= book.title %></div>
+
+  <P>Body</P>
+  <div><%= book.body %></div>
+
+</span>
+<% end %>
+
+
+
 <h2>New book</h2>
-<%= form_with model: @boo do |f| %>
+<%= form_with model: Book.new do |f| %>
 
   <h4>Title</h4>
   <%= f.text_field :title %>
@@ -11,3 +25,10 @@
   <%= f.submit 'Create Book' %>
 
 <% end %>
+
+
+
+
+
+
+
