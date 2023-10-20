@@ -5,7 +5,7 @@ class BooksController < ApplicationController
     
     book.save
     
-    redirect_to '/show'
+    redirect_to 'books/:id'
     
   end
 
@@ -14,6 +14,8 @@ class BooksController < ApplicationController
   end
 
   def show
+    @book = Book.find(params[:id])
+    
   end
 
   def edit
